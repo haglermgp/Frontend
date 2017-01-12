@@ -1,0 +1,16 @@
+.carousel.carousel-slider.carousel-bestseller {
+  background-color: #1066b1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  .carousel.carousel-slider.carousel-bestseller .carousel-item {
+    width: 400px;
+    height: 400px; }
+
+.carousel.carousel-sell .carousel-item {
+  width: 400px;
+  height: 400px; }
+  .carousel.carousel-sell .carousel-item img {
+    opacity: 1; }
+
+/*# sourceMappingURL=custom.css.map */
