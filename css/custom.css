@@ -1,16 +1,87 @@
-.carousel.carousel-slider.carousel-bestseller {
-  background-color: #1066b1;
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-  .carousel.carousel-slider.carousel-bestseller .carousel-item {
-    width: 400px;
-    height: 400px; }
+.side-nav{
+  top: 56px;
+}
+.navbar-fixed{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background-color: none;
+}
 
-.carousel.carousel-sell .carousel-item {
-  width: 400px;
-  height: 400px; }
-  .carousel.carousel-sell .carousel-item img {
-    opacity: 1; }
+#sidenav-overlay{
+  background: none;
+  height: 0vh;
+}
 
-/*# sourceMappingURL=custom.css.map */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+/*ANIMACION DEL NAVBAR SCROLL*/
+@-webkit-keyframes headroom--unpinned {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes headroom--unpinned {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.slideUp {
+  -webkit-animation-name: headroom--unpinned;
+  animation-name: headroom--unpinned;
+  animation-duration: 2.5s;
+}
+
+@-webkit-keyframes headroom--pinned {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes headroom--pinned {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideDown {
+  -webkit-animation-name: headroom--pinned;
+  animation-name: headroom--pinned;
+}

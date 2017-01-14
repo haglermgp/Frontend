@@ -7334,8 +7334,7 @@ Picker.extend( 'pickadate', DatePicker )
         padding: 0, // Padding between non center items
         full_width: false, // Change to full width styles
         indicators: false, // Toggle indicators
-        no_wrap: false, // Don't wrap around and cycle through items.
-        carousel_opacity: 0.2 // Opacity
+        no_wrap: false // Don't wrap around and cycle through items.
       };
       options = $.extend(defaults, options);
 
@@ -7485,7 +7484,7 @@ Picker.extend( 'pickadate', DatePicker )
               ' translateZ(' + (options.dist * tween) + 'px)';
             el.style.zIndex = 0;
             if (options.full_width) { tweenedOpacity = 1; }
-            else { tweenedOpacity = 1 - options.carousel_opacity * tween; }
+            else { tweenedOpacity = 1 - 0.2 * tween; }
             el.style.opacity = tweenedOpacity;
             el.style.display = 'block';
           }
@@ -7497,7 +7496,7 @@ Picker.extend( 'pickadate', DatePicker )
               tweenedOpacity = (i === half && delta < 0) ? 1 - tween : 1;
             } else {
               zTranslation = options.dist * (i * 2 + tween * dir);
-              tweenedOpacity = 1 - options.carousel_opacity * (i * 2 + tween * dir);
+              tweenedOpacity = 1 - 0.2 * (i * 2 + tween * dir);
             }
             // Don't show wrapped items.
             if (!options.no_wrap || center + i < count) {
@@ -7517,7 +7516,7 @@ Picker.extend( 'pickadate', DatePicker )
               tweenedOpacity = (i === half && delta > 0) ? 1 - tween : 1;
             } else {
               zTranslation = options.dist * (i * 2 - tween * dir);
-              tweenedOpacity = 1 - options.carousel_opacity * (i * 2 - tween * dir);
+              tweenedOpacity = 1 - 0.2 * (i * 2 - tween * dir);
             }
             // Don't show wrapped items.
             if (!options.no_wrap || center - i >= 0) {
@@ -7541,7 +7540,7 @@ Picker.extend( 'pickadate', DatePicker )
               ' translateZ(' + (options.dist * tween) + 'px)';
             el.style.zIndex = 0;
             if (options.full_width) { tweenedOpacity = 1; }
-            else { tweenedOpacity = 1 - options.carousel_opacity * tween; }
+            else { tweenedOpacity = 1 - 0.2 * tween; }
             el.style.opacity = tweenedOpacity;
             el.style.display = 'block';
           }
